@@ -18,12 +18,25 @@ jobs:
       - run: npm ci
       - run: npx cypress run --browser electron --headless
 
-      - if: always()
+      - name: Merge and Generate Mochawesome Report
+        if: always()
         run: |
-          npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json
+          # Ensure the reports directory exists
+          mkdir -p cypress/reports
+
+          # Merge JSON only if files exist
+          if ls cypress/reports/*.json 1> /dev/null 2>&1; then
+            npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json
+          else
+            echo "⚠️ No JSON reports found to merge"
+            echo "{}" > cypress/reports/merged.json
+          fi
+
+          # Generate HTML report
           npx marge cypress/reports/merged.json --reportDir cypress/reports/final
 
-      - if: always()
+      - name: Upload HTML Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
