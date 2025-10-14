@@ -1,45 +1,38 @@
-FHIR API Automation Tests (Cypress + TypeScript)
+# FHIR API Automation Tests (Cypress + TypeScript)
 
-Automated tests for HL7 FHIR R4 REST endpoints using Cypress.
-Covers CRUD + search flows for core resources against the public HAPI FHIR R4 server.
+![Cypress Tests](https://github.com/jaganatwork/fhir-api-tests-cypress/actions/workflows/cypress.yml/badge.svg)
 
-✅ Framework: Cypress 15, TypeScript
+Automated tests for **HL7 FHIR R4** REST endpoints using **Cypress**.  
+Covers CRUD + search flows for core resources against the public **HAPI FHIR R4** server.
 
-✅ Resources covered: Patient, Condition (CRUD + search)
+---
 
-✅ Reporting: Mochawesome merged HTML report
+### ✅ Features
 
-✅ CI/CD: GitHub Actions (headless Electron)
+- ✅ **Resources covered:** Patient, Condition (CRUD + search)
+- ✅ **Reporting:** Mochawesome merged HTML report
+- ✅ **CI/CD:** GitHub Actions (headless Electron)
 
-Default base URL: https://hapi.fhir.org/baseR4 (configured in cypress.config.ts)
+**Default base URL:** [https://hapi.fhir.org/baseR4](https://hapi.fhir.org/baseR4)  
+_(Configured in `cypress.config.ts`)_
 
-Table of Contents
+---
 
-Project Structure
+## 📘 Table of Contents
 
-Prerequisites
-
-Install & Run
-
-Run a Specific Spec
-
-Reports
-
-Continuous Integration
-
-Configuration
-
-Tests Overview
-
-Patient
-
-Condition
-
-Roadmap
-
-Notes
-
-Author
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Install & Run](#install--run)
+- [Run a Specific Spec](#run-a-specific-spec)
+- [Reports](#reports)
+- [Continuous Integration](#continuous-integration)
+- [Configuration](#configuration)
+- [Tests Overview](#tests-overview)
+  - [Patient](#patient)
+  - [Condition](#condition)
+- [Roadmap](#roadmap)
+- [Notes](#notes)
+- [Author](#author)
 
 fhir-api-tests-cypress/
 ├── cypress/
@@ -130,7 +123,7 @@ cypress/reports/
 cypress/videos/
 cypress/screenshots/
 
-ests Overview
+Tests Overview
 Patient
 
 Files
