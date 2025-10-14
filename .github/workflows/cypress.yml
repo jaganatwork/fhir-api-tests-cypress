@@ -9,33 +9,42 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - run: npm ci
-      - run: npx cypress run --browser electron --headless
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress (headless)
+        run: npx cypress run --browser electron --headless
 
       - name: Merge and Generate Mochawesome Report
         if: always()
         run: |
-          # Ensure the reports directory exists
+          # Ensure reports directory exists
           mkdir -p cypress/reports
 
           # Merge JSON only if files exist
           if ls cypress/reports/*.json 1> /dev/null 2>&1; then
+            echo "🔄 Merging Mochawesome JSON reports..."
             npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json
           else
-            echo "⚠️ No JSON reports found to merge"
+            echo "⚠️ No JSON reports found to merge, creating empty file"
             echo "{}" > cypress/reports/merged.json
           fi
 
-          # Generate HTML report
-          npx marge cypress/reports/merged.json --reportDir cypress/reports/final
+          # Generate HTML report (using correct binary name)
+          echo "📄 Generating Mochawesome HTML report..."
+          npx mochawesome-report-generator cypress/reports/merged.json --reportDir cypress/reports/final
 
-      - name: Upload HTML Report
+      - name: Upload HTML Report Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
