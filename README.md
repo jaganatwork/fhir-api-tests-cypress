@@ -55,16 +55,20 @@ fhir-api-tests-cypress/
 ├── tsconfig.json
 └── README.md
 
-Prerequisites
+---
 
-Node.js 20+ (Codespaces image already includes it)
+## 🧰 Prerequisites
 
-Internet access (tests call the public HAPI FHIR server)
+- **Node.js 20+** (Codespaces image already includes it)
+- Internet access (tests call the public [HAPI FHIR server](https://hapi.fhir.org/baseR4))
 
-Install & Run
+---
 
-# install deps
+## ⚙️ Install & Run
 
+### 🪜 Install dependencies
+
+```bash
 npm install
 
 # run all specs (headless Electron)
@@ -234,3 +238,4 @@ Author
 Jagannathan Naganathan
 Volunteer Senior SDET Lead – FHIR Patient Data Services
 Built with Cypress, TypeScript, and GitHub Actions.
+```
