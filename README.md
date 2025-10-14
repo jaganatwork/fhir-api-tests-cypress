@@ -34,6 +34,8 @@ _(Configured in `cypress.config.ts`)_
 - [Notes](#notes)
 - [Author](#author)
 
+## 🗂️ Project Structure
+
 fhir-api-tests-cypress/
 ├── cypress/
 │ ├── e2e/
