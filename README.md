@@ -36,24 +36,26 @@ _(Configured in `cypress.config.ts`)_
 
 ## 🗂️ Project Structure
 
+```text
 fhir-api-tests-cypress/
 ├── cypress/
-│ ├── e2e/
-│ │ └── api/
-│ │ ├── patient.basic.cy.ts # Patient search (Bundle) checks
-│ │ ├── patient.crud.cy.ts # Patient CRUD + verify deletion
-│ │ └── condition.crud.cy.ts # Condition CRUD + search
-│ ├── reports/ # Mochawesome JSON & HTML (generated)
-│ ├── screenshots/ # Failure screenshots (generated)
-│ └── videos/ # Videos if enabled (generated)
+│   ├── e2e/
+│   │   └── api/
+│   │       ├── patient.basic.cy.ts   # Patient search (Bundle) checks
+│   │       ├── patient.crud.cy.ts    # Patient CRUD + verify deletion
+│   │       └── condition.crud.cy.ts  # Condition CRUD + search
+│   ├── reports/      # Mochawesome JSON & HTML (generated)
+│   ├── screenshots/  # Failure screenshots (generated)
+│   └── videos/       # Videos if enabled (generated)
 ├── .github/
-│ └── workflows/
-│ └── cypress.yml # CI pipeline (GitHub Actions)
+│   └── workflows/
+│       └── cypress.yml   # CI pipeline (GitHub Actions)
 ├── .gitignore
 ├── cypress.config.ts
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
 
 ---
 
