@@ -9,7 +9,8 @@
     "report:html": "npx marge cypress/reports/merged.json --reportDir cypress/reports/final",
     "test": "npm run cy:run && npm run report:merge && npm run report:html",
     "test:patient:schema": "npx cypress run --spec cypress/e2e/api/patient.schema.dynamic.cy.ts --browser electron --headless",
-    "test:patient:get": "npx cypress run --spec cypress/e2e/api/patient.schema.get.cy.ts --browser electron --headless"
+    "test:patient:get": "npx cypress run --spec cypress/e2e/api/patient.schema.get.cy.ts --browser electron --headless",
+    "test:patient:put": "npx cypress run --spec cypress/e2e/api/patient.schema.put.cy.ts --browser electron --headless"
   },
   "keywords": [
     "cypress",
@@ -31,6 +32,7 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "yaml": "^2.8.1"
   }
 }
