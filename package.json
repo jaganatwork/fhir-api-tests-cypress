@@ -8,7 +8,8 @@
     "report:merge": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json",
     "report:html": "npx marge cypress/reports/merged.json --reportDir cypress/reports/final",
     "test": "npm run cy:run && npm run report:merge && npm run report:html",
-    "test:patient:schema": "npx cypress run --spec cypress/e2e/api/patient.schema.dynamic.cy.ts --browser electron --headless"
+    "test:patient:schema": "npx cypress run --spec cypress/e2e/api/patient.schema.dynamic.cy.ts --browser electron --headless",
+    "test:patient:get": "npx cypress run --spec cypress/e2e/api/patient.schema.get.cy.ts --browser electron --headless"
   },
   "keywords": [
     "cypress",
