@@ -1,0 +1,5 @@
+{
+  "resourceType": "Medication",
+  "code": { "text": "Aspirin 100mg Tablet" },
+  "status": "active"
+}

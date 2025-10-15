@@ -12,7 +12,9 @@
     "test:patient:get": "npx cypress run --spec cypress/e2e/api/patient.schema.get.cy.ts --browser electron --headless",
     "test:patient:put": "npx cypress run --spec cypress/e2e/api/patient.schema.put.cy.ts --browser electron --headless",
       "test:patient:delete": "npx cypress run --spec cypress/e2e/api/patient.schema.delete.cy.ts --browser electron --headless",
-        "test:observation": "npx cypress run --spec 'cypress/e2e/api/observation/observation.cy.ts' --browser electron --headless"
+        "test:observation": "npx cypress run --spec 'cypress/e2e/api/observation/observation.cy.ts' --browser electron --headless",
+          "test:medication": "npx cypress run --spec 'cypress/e2e/api/medication/medication.cy.ts' --browser electron --headless"
+
 
   },
   "keywords": [
