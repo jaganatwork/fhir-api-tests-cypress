@@ -19,3 +19,10 @@ export interface Observation {
   valueQuantity?: Quantity;
   subject: Reference;
 }
+
+export interface Medication {
+  resourceType: "Medication";
+  id?: string;
+  code: CodeableConcept;
+  status: string;
+}
