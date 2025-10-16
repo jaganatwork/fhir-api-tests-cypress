@@ -249,5 +249,5 @@ cy.request({
 ## 👤 Author
 
 Jagannathan Naganathan  
-Volunteer Senior SDET Lead – FHIR Patient Data Services  
+Senior SDET Lead – FHIR Patient Data Services  
 Built with Cypress, TypeScript, and GitHub Actions.
